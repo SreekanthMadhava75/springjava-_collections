@@ -1,0 +1,28 @@
+package com.example.demo.al;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+public class ArrayListIteratorRemoveExample {
+	
+
+	public void ArrayListIteratorRemove(){
+		List<Integer> numbers = new ArrayList<>();
+        numbers.add(13);
+        numbers.add(18);
+        numbers.add(25);
+        numbers.add(40);
+        
+        Iterator<Integer> numberIterator = numbers.iterator();
+        while (numberIterator.hasNext()) {
+        	Integer num = numberIterator.next();
+			if (num % 2 != 0 ) {
+				numberIterator.remove();
+			}
+			
+		}
+        System.out.println(numbers);
+		
+	}
+}
